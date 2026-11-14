@@ -8,8 +8,8 @@ const SITE = {
   title: "Mechanical Engineering and Physics Double Major",
   email: "elihamaker@gmail.com",
   links: [
-    { label: "GitHub",   url: "https://github.com/yourname" },
-    { label: "LinkedIn", url: "https://linkedin.com/in/yourname" },
+    { label: "GitHub",   url: "https://github.com/hamaker-png" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/eli-hamaker-17a14625b/" },
     { label: "Resume",   url: "images/resume.pdf" }
   ]
 };
@@ -20,7 +20,7 @@ const SITE = {
 //   a) add a new { ... } line below
 //   b) copy projects/robot-arm.html to projects/<id>.html
 // "id" MUST match the file name (without .html)
-// "category" groups projects on the home page and in the sidebar
+// "category" groups projects on the projects page and in the sidebar
 // "image" is optional. Example: "images/robot-arm.jpg". Leave "" for a placeholder.
 // ============================================================
 const PROJECTS = [
@@ -52,8 +52,8 @@ document.getElementById("header").innerHTML = `
 
 // --- Sidebar ---
 let sidebar = `
-  <a class="side-top ${current === "home" ? "active" : ""}"  href="${root}index.html">Home</a>
-  <a class="side-top ${current === "about" ? "active" : ""}" href="${root}about.html">About</a>`;
+  <a class="side-top ${current === "about" ? "active" : ""}" href="${root}about.html">About</a>
+  <a class="side-top ${current === "projects" ? "active" : ""}" href="${root}index.html">Projects</a>`;
 
 for (const cat of categories) {
   sidebar += `<div class="side-heading">${cat}</div>`;
@@ -63,7 +63,7 @@ for (const cat of categories) {
 }
 document.getElementById("sidebar").innerHTML = sidebar;
 
-// --- Home page project grid (only runs if the page has <div id="project-grid">) ---
+// --- Projects page grid (only runs if the page has <div id="project-grid">) ---
 const grid = document.getElementById("project-grid");
 if (grid) {
   let html = "";

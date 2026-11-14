@@ -115,7 +115,7 @@ h2 {
 p { margin: 0 0 10px 0; max-width: 750px; }
 .meta { color: var(--text-light); margin-bottom: 12px; }
 
-/* ============ HOME PAGE PROJECT GRID ============ */
+/* ============ PROJECTS PAGE GRID ============ */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  /* change 150px for bigger/smaller cards */
