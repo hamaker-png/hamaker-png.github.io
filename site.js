@@ -1,7 +1,7 @@
 // ============================================================
 // 1. YOUR PERSONAL INFO (shown in the fixed header on every page)
 // Links starting with "http" are used as-is.
-// Anything else (like "images/resume.pdf") is treated as a local file.
+// Anything else is treated as a local file.
 // ============================================================
 const SITE = {
   name: "Elijah Hamaker",
@@ -9,8 +9,7 @@ const SITE = {
   email: "elihamaker@gmail.com",
   links: [
     { label: "GitHub",   url: "https://github.com/hamaker-png" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/eli-hamaker-17a14625b/" },
-    { label: "Resume",   url: "images/resume.pdf" }
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/eli-hamaker-17a14625b/" }
   ]
 };
 
@@ -18,16 +17,36 @@ const SITE = {
 // 2. YOUR PROJECTS
 // To add a project:
 //   a) add a new { ... } line below
-//   b) copy projects/robot-arm.html to projects/<id>.html
+//   b) copy an existing file in projects/ to projects/<id>.html
 // "id" MUST match the file name (without .html)
 // "category" groups projects on the projects page and in the sidebar
-// "image" is optional. Example: "images/robot-arm.jpg". Leave "" for a placeholder.
+// "image" is optional. Example: "images/projects/tank.jpg". Leave "" for a placeholder.
 // ============================================================
 const PROJECTS = [
-  { id: "robot-arm",    title: "Robot Arm",         category: "Mechanical",  summary: "6-DOF arm with servo control.",  image: "" },
-  { id: "gearbox",      title: "Planetary Gearbox", category: "Mechanical",  summary: "3D-printed 5:1 reduction.",      image: "" },
-  { id: "weather-app",  title: "Weather App",       category: "Software",    summary: "Python dashboard using an API.", image: "" },
-  { id: "sensor-board", title: "Sensor Board",      category: "Electronics", summary: "Custom PCB with I2C sensors.",   image: "" }
+  { id: "automated-exfoliator", title: "Automated 2D-Material Exfoliator", category: "Research Automation", summary: "Automated production of monolayer flakes for 2D-device research.", image: "images/projects/automated-exfoliator/overview.jpg" },
+  { id: "glovebox-transfer-robot", title: "Glovebox Transfer Robot", category: "Research Automation", summary: "Gantry system for moving silicon chips between glovebox equipment.", image: "images/projects/glovebox-transfer-robot/metal-3d-printed-grippers.jpg" },
+  { id: "vacuum-suitcase", title: "Vacuum Suitcase", category: "Research Automation", summary: "Air-sensitive material transfer between an evaporator and glovebox.", image: "images/projects/vacuum-suitcase/photo-1.jpg" },
+  { id: "lab-tooling", title: "Research Lab Tooling", category: "Research Automation", summary: "CNC equipment, electronics, enclosures, and UHV components.", image: "images/projects/lab-tooling/cnc-router.jpg" },
+
+  { id: "tank", title: "Tracked Vehicle", category: "Personal Projects", summary: "Design and fabrication of a gasoline-powered tracked vehicle.", image: "images/projects/tracked-vehicle/cad-render.jpg" },
+  { id: "3d-printer", title: "RatRig V-Core 3D Printer", category: "Personal Projects", summary: "Built and commissioned a large-format DIY 3D printer.", image: "images/projects/3d-printer/printer.jpg" },
+  { id: "metal-tables", title: "Fabricated Metal Tables", category: "Personal Projects", summary: "Welded decorative steel tables for a robotics-team fundraiser.", image: "images/projects/metal-tables/finished-tables.jpg" },
+  { id: "model-rockets", title: "Model Rockets", category: "Personal Projects", summary: "Four years of TARC rocket design and fabrication.", image: "images/projects/model-rockets/rocket.jpg" },
+  { id: "model-trains", title: "Model Train Restoration", category: "Personal Projects", summary: "Restored locomotives, track, wiring, and a transformer.", image: "images/projects/model-train-restoration/transformer.jpg" },
+
+  { id: "frc-2025", title: "FRC 2025", category: "Competition Robotics", summary: "Robot design, machining, and assembly for the 2025 season.", image: "images/projects/frc-2025/robot-lineup.jpg" },
+  { id: "frc-2024", title: "FRC 2024", category: "Competition Robotics", summary: "Robot and swerve-drivetrain development for the 2024 season.", image: "images/projects/frc-2024/robot-render.jpg" },
+  { id: "frc-2023", title: "FRC 2023", category: "Competition Robotics", summary: "Robot design, machining, assembly, and team development.", image: "images/projects/frc-2023/robot-render.jpg" },
+  { id: "ftc-2024-2025", title: "FTC 2024-2025", category: "Competition Robotics", summary: "Mechanical design, manufacturing, and assembly for the 2024-2025 robot.", image: "images/projects/ftc-2024-2025/robot.jpg" },
+  { id: "ftc-2023-2024", title: "FTC 2023-2024", category: "Competition Robotics", summary: "Mechanical design, manufacturing, and assembly for the 2023-2024 robot.", image: "images/projects/ftc-2023-2024/robot.jpg" },
+  { id: "vrc-2022-2023", title: "VRC 2022-2023", category: "Competition Robotics", summary: "Competition robot design, programming, and fabrication for 2022-2023.", image: "images/projects/vrc-2022-2023/robot-1.jpg" },
+  { id: "vrc-2021-2022", title: "VRC 2021-2022", category: "Competition Robotics", summary: "Competition robot development for the 2021-2022 season.", image: "" },
+  { id: "vrc-2020-2021", title: "VRC 2020-2021", category: "Competition Robotics", summary: "Iterative robot design and autonomous programming for 2020-2021.", image: "images/projects/vrc-2020-2021/robot-comparison.jpg" },
+  { id: "vrc-2019-2020", title: "VRC 2019-2020", category: "Competition Robotics", summary: "Competition robot and autonomous programming for the 2019-2020 season.", image: "" },
+  { id: "vex-differential-mecanum", title: "Differential Mecanum Drive", category: "Competition Robotics", summary: "Custom planetary transmission for balanced mecanum-wheel power.", image: "images/projects/vex-differential-mecanum/render.jpg" },
+
+  { id: "contour-vision", title: "Contour Vision", category: "Software", summary: "CPU-only computer-vision workbench built for HackMIT 2026.", image: "images/projects/contour-vision/logo.svg" },
+  { id: "swerve-traction-control", title: "Swerve Traction Control", category: "Software", summary: "Wheel-slip detection and control for an FRC swerve drivetrain.", image: "images/projects/frc-2024/swerve-drivetrain.jpg" }
 ];
 
 // ============================================================
@@ -52,8 +71,8 @@ document.getElementById("header").innerHTML = `
 
 // --- Sidebar ---
 let sidebar = `
-  <a class="side-top ${current === "about" ? "active" : ""}" href="${root}about.html">About</a>
-  <a class="side-top ${current === "projects" ? "active" : ""}" href="${root}index.html">Projects</a>`;
+  <a class="side-top ${current === "about" ? "active" : ""}" href="${root}index.html">About</a>
+  <a class="side-top ${current === "projects" ? "active" : ""}" href="${root}projects.html">Projects</a>`;
 
 for (const cat of categories) {
   sidebar += `<div class="side-heading">${cat}</div>`;

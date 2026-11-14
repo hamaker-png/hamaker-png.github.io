@@ -3,43 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eli Hamaker – Portfolio</title>
+  <title>About -- Eli Hamaker</title>
   <link rel="icon" type="image/png" href="images/webpage_pic.png">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- data-root: "" because this file is at the top level. data-page: highlights the sidebar link -->
-<body data-root="" data-page="projects">
+<body data-root="" data-page="about">
 
-  <div id="header"></div>    <!-- filled in by site.js -->
-  <div id="sidebar"></div>   <!-- filled in by site.js -->
+  <div id="header"></div>
+  <div id="sidebar"></div>
 
   <main id="content">
-    <!-- <h1>Education</h1>
-    <p class="meta"> <b>Massachusetts Institute of Technology</b></p>
-    <p class="meta">
-      <em>Mechanical Engineering and Physics Double Major</em>
-      <span style="float:right;">
-        GPA: 5.0/5.0
-      </span>
-    </p>
-    <p class="meta">
-      Relevant Classwork:
-      <br>Control and Dynamics 1 & 2; Mechanics and Materials 1; C and Assembly
-      <br>Quantum Mechanics 1 & 2; Statistical Physics 1; Advanced Electromagnetism; Physics of Solids 1
-    </p>
+    <h1>About</h1>
+    <p>Hi, I’m Eli Hamaker. I am a sophomore at the Massachusetts Institute of Technology pursuing a double major in Mechanical Engineering and Physics. I have experience in research automation, manufacturing, and design for manufacturing. Outside of school and work, I enjoy hiking, mountain biking, and rock climbing.</p>
 
-    <p class="meta"> <b>University of Arkansas, Fayetteville</b></p>
-    <p class="meta">
-      <em>High School Dual Enrollment</em>
-      <span style="float:right;">
-        GPA: 4.0/4.0
-      </span>
-    </p>
-    <p class="meta">Relevant Classwork:<br>Lagrangian Mechanics; Multivariable Calculus; Differential Calculus; Linear Algebra</p> -->
+    <h2>Skills</h2>
+    <ul>
+      <li>CAD (SolidWorks, Fusion 360, Inventor)</li>
+      <li>Python, C, C++, HTML, CSS, computer vision</li>
+      <li>3D printing, CNC milling, turning, welding</li>
+    </ul>
 
-    <h1>Projects</h1>
-    <div id="project-grid"></div>   <!-- filled in by site.js -->
+    <h2>Experience</h2>
+
+    <article class="entry">
+      <h3>Research Intern <span>(20-40 hours/week)</span></h3>
+      <p class="meta-line">
+        <strong>Dr. Pablo Jarillo-Herrero’s Lab, MIT</strong>
+        <span>Cambridge, MA &middot; Sep 2025-Present</span>
+      </p>
+      <ul>
+        <li>Automated the stacking process for 2D crystals, including graphene, hBN, and TMDs.</li>
+        <li>Robotics programming and simulation; PLC design; cleanroom experience; computer vision; and microscope and optics design.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <h3>Mechanical Engineering Intern <span>(10 hours/week)</span></h3>
+      <p class="meta-line">
+        <strong>REV Robotics</strong>
+        <span>Carrollton, TX (Virtual) &middot; Oct 2025-Sep 2026</span>
+      </p>
+      <ul>
+        <li>Designed injection-molded, extruded, and CNC-milled parts for educational robotics platforms.</li>
+        <li>Simulated parts and created engineering drawings.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <h3>Research Intern <span>(20-50 hours/week)</span></h3>
+      <p class="meta-line">
+        <strong>Dr. Hugh Churchill’s Lab, University of Arkansas</strong>
+        <span>Fayetteville, AR &middot; Jun 2024-Aug 2025</span>
+      </p>
+      <ul>
+        <li>Created robotic systems for the MonArk Quantum Foundry, a $20M+ National Science Foundation project.</li>
+        <li>Developed a cost-efficient transfer robot for gloveboxes and deployed a duplicate system at Montana State University.</li>
+      </ul>
+    </article>
+
+    <h2>Education</h2>
+
+    <article class="entry">
+      <h3>Massachusetts Institute of Technology</h3>
+      <p class="meta-line">
+        <span>Mechanical Engineering and Physics Double Major</span>
+        <span>GPA: 5.0/5.0</span>
+      </p>
+      <p>Relevant coursework: Control and Dynamics 1 &amp; 2; Mechanics and Materials 1; C and Assembly; Quantum Mechanics 1 &amp; 2; Statistical Physics 1; Advanced Electromagnetism; Physics of Solids 1.</p>
+    </article>
+
+    <article class="entry">
+      <h3>University of Arkansas, Fayetteville</h3>
+      <p class="meta-line">
+        <span>High School Dual Enrollment</span>
+        <span>GPA: 4.0/4.0</span>
+      </p>
+      <p>Relevant coursework: Lagrangian Mechanics; Multivariable Calculus; Differential Calculus; Linear Algebra.</p>
+    </article>
   </main>
 
   <script src="site.js"></script>

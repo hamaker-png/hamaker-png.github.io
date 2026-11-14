@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swerve Traction Control -- Eli Hamaker</title>
+  <link rel="icon" type="image/png" href="../images/webpage_pic.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-root="../" data-page="swerve-traction-control">
+  <div id="header"></div>
+  <div id="sidebar"></div>
+  <main id="content">
+    <h1>Swerve Traction Control</h1>
+    <p class="project-meta">FRC 2024 &middot; Software</p>
+    <p>Wrote a simple traction-control system for an FRC swerve drivetrain. It detects wheel slip using only the drive-motor encoders, so it does not need any extra sensors.</p>
+
+    <img class="project-image" src="../images/projects/frc-2024/swerve-drivetrain.jpg" alt="FRC swerve drivetrain">
+
+    <h2>How It Works</h2>
+    <ul>
+      <li>Calculates wheel jerk from the drive-motor encoder data.</li>
+      <li>Detects slip when the jerk passes a set threshold.</li>
+      <li>Holds the last non-slipping module angle and acceleration until the wheel regains traction.</li>
+      <li>Uses one small set of tuning values instead of a detailed drivetrain model.</li>
+    </ul>
+
+    <h2>Testing</h2>
+    <p>The same tuning worked on slick concrete and carpet. In full-forward-to-reverse tests, the controller shortened the jerk spikes caused by wheel slip.</p>
+  </main>
+  <script src="../site.js"></script>
+</body>
+</html>

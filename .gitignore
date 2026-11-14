@@ -1,0 +1,43 @@
+# Local-only source material and private documents. Website-ready assets live in images/projects/.
+project-source-files/
+
+# Private documents, archives, and engineering source files.
+documents/
+*.pdf
+*.doc
+*.docx
+*.zip
+*.7z
+*.rar
+*.step
+*.stp
+*.sldprt
+*.psd
+*.ai
+*.dwg
+*.dxf
+
+# Credentials and local environment files.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# Temporary, editor, OS, and local tool files.
+tmp/
+*.log
+*.tmp
+*.bak
+*.orig
+*~
+.DS_Store
+Thumbs.db
+/.vscode/
+/.idea/
+/.codex/
+/.openai/
+/.agents/

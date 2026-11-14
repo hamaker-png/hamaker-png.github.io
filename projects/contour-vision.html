@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contour Vision -- Eli Hamaker</title>
+  <link rel="icon" type="image/png" href="../images/webpage_pic.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-root="../" data-page="contour-vision">
+  <div id="header"></div>
+  <div id="sidebar"></div>
+  <main id="content">
+    <h1>Contour Vision</h1>
+    <p class="project-meta">HackMIT 2026</p>
+    <p>Built for HackMIT 2026, Contour is a CPU-only tool for building and comparing computer-vision pipelines. It can measure simple objects and export the final pipeline as C++.</p>
+    <p class="project-links"><a href="https://github.com/hamaker-png/contour-vision" target="_blank" rel="noopener">View source on GitHub</a></p>
+
+    <img class="project-image" src="../images/projects/contour-vision/logo.svg" alt="Contour Vision grid logo">
+
+    <h2>What It Does</h2>
+    <ul>
+      <li>Chains image-processing steps together and previews the result immediately.</li>
+      <li>Compares different transforms and pipelines without requiring a GPU.</li>
+      <li>Measures object length, width, area, orientation, center, and mean color, with calibration for physical dimensions.</li>
+      <li>Can suggest a pipeline with AI, but saves the suggestion as a normal graph that the user can inspect and change.</li>
+      <li>Exports C++ programs that do not require Python, an AI model, an API key, or a GPU at runtime.</li>
+    </ul>
+
+    <h2>Implementation</h2>
+    <p>The frontend uses plain JavaScript and CSS. The FastAPI backend uses OpenCV, a small CImg bridge, and ZXing-C++ for image processing and barcode support. The preview and C++ export both use the same operation graph.</p>
+
+    <h2>Validation</h2>
+    <p>The project has 140 Python tests and 50 JavaScript tests covering 60 images and 159 processing branches. Three exported C++ pipelines were also tested on nine images and compared with the browser preview.</p>
+  </main>
+  <script src="../site.js"></script>
+</body>
+</html>

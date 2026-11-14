@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automated 2D-Material Exfoliator -- Eli Hamaker</title>
+  <link rel="icon" type="image/png" href="../images/webpage_pic.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-root="../" data-page="automated-exfoliator">
+  <div id="header"></div>
+  <div id="sidebar"></div>
+  <main id="content">
+    <h1>Automated 2D-Material Exfoliator</h1>
+    <p class="project-meta">MonArk Quantum Foundry &middot; Jun 2024-Aug 2025</p>
+    <p>Automated system for producing monolayer flakes of graphene and other van der Waals materials for 2D-device research.</p>
+
+    <h2>Project Scope</h2>
+    <ul>
+      <li>Designed the complete mechanical system.</li>
+      <li>Completed assembly and approximately 70% of the wiring.</li>
+      <li>Built the machine around compact industrial linear motion, pneumatic actuators, vacuum handling, and a heated sample stage.</li>
+      <li>Included fasteners, wire paths, assembly details, and service access in the CAD.</li>
+    </ul>
+
+    <div class="project-gallery">
+      <figure><img src="../images/projects/automated-exfoliator/overview.jpg" alt="Automated exfoliator system" loading="lazy"><figcaption>Exfoliator system</figcaption></figure>
+      <figure><img src="../images/projects/automated-exfoliator/side-view.jpg" alt="Side view of the automated exfoliator" loading="lazy"><figcaption>Mechanical system and motion hardware</figcaption></figure>
+      <figure><img src="../images/projects/automated-exfoliator/pneumatic-solenoids.jpg" alt="Pneumatic pressure regulators on the exfoliator" loading="lazy"><figcaption>Pneumatic force controls</figcaption></figure>
+      <figure><img src="../images/projects/automated-exfoliator/control-electronics.jpg" alt="Control electronics inside the automated exfoliator" loading="lazy"><figcaption>ClearCore-based control electronics</figcaption></figure>
+      <figure><img src="../images/projects/automated-exfoliator/monolayer-graphene.jpg" alt="Monolayer graphene flake" loading="lazy"><figcaption>Monolayer graphene flake</figcaption></figure>
+    </div>
+
+    <h2>Controls and Process Development</h2>
+    <ul>
+      <li>Used Teknic ClearCore and ClearPath hardware for motion control, with a C++ state machine for the exfoliation sequence.</li>
+      <li>Controlled actuator force with air pressure and actuator speed with exhaust flow valves; separate solenoids control vacuum pickup.</li>
+      <li>Implemented thermistor feedback and PID temperature control for the heated sample stage.</li>
+      <li>Developed a tape guide and calibration process to reduce chip movement and lifting during tape removal.</li>
+      <li>The machine connects to a ScopeFoundry interface for setting up runs, checking status, and recording results.</li>
+    </ul>
+
+    <h2>System Demo</h2>
+    <div class="video-embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/zvcaywXi1zE" title="Automated exfoliator demo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <p class="video-link"><a href="https://youtube.com/shorts/zvcaywXi1zE" target="_blank" rel="noopener">Open the video on YouTube</a></p>
+  </main>
+  <script src="../site.js"></script>
+</body>
+</html>

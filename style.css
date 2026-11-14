@@ -1,12 +1,17 @@
 /* ============ EDIT THESE FIRST ============ */
 :root {
-  --blue-lightest: #f1f8fd;   /* sidebar background */
-  --blue-light:    #d9ecf9;   /* header background, placeholders */
-  --blue-border:   #aed2ec;   /* borders */
-  --orange:        #c85a0e;   /* dark orange: name, headings, hover */
-  --orange-dark:   #9f4509;   /* darker orange for active links */
-  --text:          #222222;
-  --text-light:    #5a6b78;
+  /* Site colors */
+  --page-background:        #ffffff; /* main content background */
+  --header-background:      #d9ecf9; /* top header */
+  --sidebar-background:     #f1f8fd; /* left navigation */
+  --interactive-background: #d9ecf9; /* hovered and selected navigation */
+  --placeholder-background: #d9ecf9; /* project image placeholders */
+  --image-background:       #ffffff; /* empty area around contained images */
+  --divider-color:          #aed2ec; /* borders and section dividers */
+  --accent-color:           #c85a0e; /* name, headings, links, and hover */
+  --active-link-color:      #9f4509; /* currently selected navigation link */
+  --primary-text-color:     #222222; /* normal text */
+  --secondary-text-color:   #5a6b78; /* subtitles and supporting text */
 
   --font-size:     12px;      /* base font size (small like McMaster) */
   --header-height: 44px;
@@ -26,11 +31,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--font-size);
   line-height: 1.5;
-  color: var(--text);
-  background: #ffffff;
+  color: var(--primary-text-color);
+  background: var(--page-background);
 }
 
-a { color: var(--orange); text-decoration: none; }
+a { color: var(--accent-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ============ HEADER (fixed at top) ============ */
@@ -38,8 +43,8 @@ a:hover { text-decoration: underline; }
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--header-height);
-  background: var(--blue-light);
-  border-bottom: 2px solid var(--orange);
+  background: var(--header-background);
+  border-bottom: 2px solid var(--accent-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,8 +54,8 @@ a:hover { text-decoration: underline; }
 .header-left  { display: flex; align-items: baseline; gap: 12px; }
 .header-right { display: flex; gap: 16px; }
 
-.site-name  { font-size: 16px; font-weight: bold; color: var(--orange); }
-.site-title { color: var(--text-light); }
+.site-name  { font-size: 16px; font-weight: bold; color: var(--accent-color); }
+.site-title { color: var(--secondary-text-color); }
 
 /* ============ SIDEBAR (fixed at left, scrolls by itself if long) ============ */
 #sidebar {
@@ -59,17 +64,17 @@ a:hover { text-decoration: underline; }
   left: 0;
   bottom: 0;
   width: var(--sidebar-width);
-  background: var(--blue-lightest);
-  border-right: 1px solid var(--blue-border);
+  background: var(--sidebar-background);
+  border-right: 1px solid var(--divider-color);
   overflow-y: auto;
   padding: 8px 0;
 }
 
 #sidebar a {
   display: block;
-  color: var(--text);
+  color: var(--primary-text-color);
 }
-#sidebar a:hover { color: var(--orange); text-decoration: none; background: var(--blue-light); }
+#sidebar a:hover { color: var(--accent-color); text-decoration: none; background: var(--interactive-background); }
 
 .side-top {
   padding: 4px 16px;
@@ -79,18 +84,18 @@ a:hover { text-decoration: underline; }
   margin-top: 12px;
   padding: 3px 16px;
   font-weight: bold;
-  color: var(--orange);
+  color: var(--accent-color);
   text-transform: uppercase;
   font-size: 11px;
-  border-bottom: 1px solid var(--blue-border);
+  border-bottom: 1px solid var(--divider-color);
 }
 .side-link { padding: 2px 16px 2px 24px; }
 
 #sidebar a.active {
-  color: var(--orange-dark);
+  color: var(--active-link-color);
   font-weight: bold;
-  background: var(--blue-light);
-  border-left: 3px solid var(--orange);
+  background: var(--interactive-background);
+  border-left: 3px solid var(--accent-color);
 }
 
 /* ============ MAIN CONTENT (the only part that scrolls) ============ */
@@ -104,16 +109,45 @@ a:hover { text-decoration: underline; }
   padding: 16px 24px 40px 24px;
 }
 
-h1 { font-size: 20px; margin: 0 0 4px 0; color: var(--orange); }
+h1 { font-size: 20px; margin: 0 0 4px 0; color: var(--accent-color); }
 h2 {
   font-size: 14px;
   margin: 20px 0 8px 0;
   padding-bottom: 3px;
-  color: var(--orange);
-  border-bottom: 1px solid var(--blue-border);
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--divider-color);
 }
 p { margin: 0 0 10px 0; max-width: 750px; }
-.meta { color: var(--text-light); margin-bottom: 12px; }
+.meta { color: var(--secondary-text-color); margin-bottom: 12px; }
+
+/* About page entries */
+.entry {
+  max-width: 850px;
+  margin-bottom: 16px;
+}
+.entry h3,
+.meta-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.entry h3 {
+  margin: 0 0 3px;
+  font-size: 13px;
+}
+.entry h3 span,
+.meta-line {
+  color: var(--secondary-text-color);
+}
+.entry h3 span,
+.meta-line > :last-child {
+  text-align: right;
+}
+.meta-line {
+  margin-bottom: 5px;
+  max-width: none;
+}
+.entry ul { margin-top: 4px; }
 
 /* ============ PROJECTS PAGE GRID ============ */
 .grid {
@@ -124,38 +158,91 @@ p { margin: 0 0 10px 0; max-width: 750px; }
 .card {
   display: block;
   padding: 6px;
-  border: 1px solid var(--blue-border);
-  color: var(--text);
+  border: 1px solid var(--divider-color);
+  color: var(--primary-text-color);
 }
-.card:hover { border-color: var(--orange); text-decoration: none; }
-.card img, .thumb-placeholder {
+.card:hover { border-color: var(--accent-color); text-decoration: none; }
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--image-background);
+  margin: 0 0 6px;
+}
+.thumb-placeholder {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
   display: block;
   margin-bottom: 6px;
 }
 .thumb-placeholder {
-  background: var(--blue-light);
-  color: var(--text-light);
+  background: var(--placeholder-background);
+  color: var(--secondary-text-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card-title { font-weight: bold; color: var(--orange); }
-.card-text  { color: var(--text-light); font-size: 11px; }
+.card-title { font-weight: bold; color: var(--accent-color); }
+.card-text  { color: var(--secondary-text-color); font-size: 11px; }
 
 /* ============ PROJECT PAGE ============ */
 .project-image {
-  max-width: 750px;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: var(--image-background);
   margin: 8px 0 12px 0;
 }
+.project-meta { color: var(--secondary-text-color); }
+.project-links { margin: 12px 0; }
+.project-links a { margin-right: 16px; }
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  max-width: 1000px;
+  margin: 12px 0 20px;
+}
+.project-gallery figure { margin: 0; }
+.project-gallery img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  background: var(--image-background);
+  border: 1px solid var(--divider-color);
+  margin: 0 auto;
+}
+.project-gallery figcaption {
+  margin-top: 3px;
+  color: var(--secondary-text-color);
+  font-size: 11px;
+}
+.video-embed {
+  width: 100%;
+  max-width: 850px;
+  aspect-ratio: 16 / 9;
+  margin: 10px 0 20px;
+}
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-link { margin: -12px 0 20px; }
 .placeholder {
   max-width: 750px;
   aspect-ratio: 16 / 9;
-  background: var(--blue-light);
-  color: var(--text-light);
+  background: var(--placeholder-background);
+  color: var(--secondary-text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,4 +254,8 @@ ul { margin: 0 0 10px 0; padding-left: 18px; }
 @media (max-width: 700px) {
   :root { --sidebar-width: 120px; }
   .header-right a:nth-child(n+3) { display: none; }
+  .entry h3,
+  .meta-line { flex-direction: column; gap: 0; }
+  .entry h3 span,
+  .meta-line > :last-child { text-align: left; }
 }
