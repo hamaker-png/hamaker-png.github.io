@@ -28,6 +28,7 @@ const PROJECTS = [
   { id: "vacuum-suitcase", title: "Vacuum Suitcase", category: "Research Automation", summary: "Air-sensitive material transfer between an evaporator and glovebox.", image: "images/projects/vacuum-suitcase/photo-1.jpg" },
   { id: "lab-tooling", title: "Research Lab Tooling", category: "Research Automation", summary: "CNC equipment, electronics, enclosures, and UHV components.", image: "images/projects/lab-tooling/cnc-router.jpg" },
 
+  { id: "string-art-robot", title: "String Art Robot", category: "Personal Projects", summary: "Robot for automatically producing circular string-art images.", image: "images/projects/string-art-robot/skull-initial-test.jpg" },
   { id: "tank", title: "Tracked Vehicle", category: "Personal Projects", summary: "Design and fabrication of a gasoline-powered tracked vehicle.", image: "images/projects/tracked-vehicle/cad-render.jpg" },
   { id: "3d-printer", title: "RatRig V-Core 3D Printer", category: "Personal Projects", summary: "Built and commissioned a large-format DIY 3D printer.", image: "images/projects/3d-printer/printer.jpg" },
   { id: "metal-tables", title: "Fabricated Metal Tables", category: "Personal Projects", summary: "Welded decorative steel tables for a robotics-team fundraiser.", image: "images/projects/metal-tables/finished-tables.jpg" },
@@ -37,12 +38,8 @@ const PROJECTS = [
   { id: "frc-2025", title: "FRC 2025", category: "Competition Robotics", summary: "Robot design, machining, and assembly for the 2025 season.", image: "images/projects/frc-2025/robot-lineup.jpg" },
   { id: "frc-2024", title: "FRC 2024", category: "Competition Robotics", summary: "Robot and swerve-drivetrain development for the 2024 season.", image: "images/projects/frc-2024/robot-render.jpg" },
   { id: "frc-2023", title: "FRC 2023", category: "Competition Robotics", summary: "Robot design, machining, assembly, and team development.", image: "images/projects/frc-2023/robot-render.jpg" },
-  { id: "ftc-2024-2025", title: "FTC 2024-2025", category: "Competition Robotics", summary: "Mechanical design, manufacturing, and assembly for the 2024-2025 robot.", image: "images/projects/ftc-2024-2025/robot.jpg" },
-  { id: "ftc-2023-2024", title: "FTC 2023-2024", category: "Competition Robotics", summary: "Mechanical design, manufacturing, and assembly for the 2023-2024 robot.", image: "images/projects/ftc-2023-2024/robot.jpg" },
-  { id: "vrc-2022-2023", title: "VRC 2022-2023", category: "Competition Robotics", summary: "Competition robot design, programming, and fabrication for 2022-2023.", image: "images/projects/vrc-2022-2023/robot-1.jpg" },
-  { id: "vrc-2021-2022", title: "VRC 2021-2022", category: "Competition Robotics", summary: "Competition robot development for the 2021-2022 season.", image: "" },
-  { id: "vrc-2020-2021", title: "VRC 2020-2021", category: "Competition Robotics", summary: "Iterative robot design and autonomous programming for 2020-2021.", image: "images/projects/vrc-2020-2021/robot-comparison.jpg" },
-  { id: "vrc-2019-2020", title: "VRC 2019-2020", category: "Competition Robotics", summary: "Competition robot and autonomous programming for the 2019-2020 season.", image: "" },
+  { id: "ftc-2023-2024", title: "FTC 2023-2024", category: "Competition Robotics", summary: "Two robot iterations built for the CENTERSTAGE season.", image: "images/projects/ftc-2023-2024/robot-2.jpg" },
+  { id: "vrc-competition-robots", title: "VRC Competition Robots", category: "Competition Robotics", summary: "Competition robots built and programmed across four VRC seasons.", image: "images/projects/vrc-competition-robots/2022-2023/competition-robot.jpg" },
   { id: "vex-differential-mecanum", title: "Differential Mecanum Drive", category: "Competition Robotics", summary: "Custom planetary transmission for balanced mecanum-wheel power.", image: "images/projects/vex-differential-mecanum/render.jpg" },
 
   { id: "contour-vision", title: "Contour Vision", category: "Software", summary: "CPU-only computer-vision workbench built for HackMIT 2026.", image: "images/projects/contour-vision/logo.svg" },
