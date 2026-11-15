@@ -38,7 +38,7 @@ const PROJECTS = [
   { id: "frc-2025", title: "FRC 2025", category: "Competition Robotics", summary: "Robot design, machining, and assembly for the 2025 season.", image: "images/projects/frc-2025/robot-lineup.jpg" },
   { id: "frc-2024", title: "FRC 2024", category: "Competition Robotics", summary: "Robot and swerve-drivetrain development for the 2024 season.", image: "images/projects/frc-2024/robot-render.jpg" },
   { id: "frc-2023", title: "FRC 2023", category: "Competition Robotics", summary: "Robot design, machining, assembly, and team development.", image: "images/projects/frc-2023/robot-render.jpg" },
-  { id: "ftc-2023-2024", title: "FTC 2023-2024", category: "Competition Robotics", summary: "Two robot iterations built for the CENTERSTAGE season.", image: "images/projects/ftc-2023-2024/robot-2.jpg" },
+  { id: "ftc-2023-2024", title: "FTC 2023-2024", category: "Competition Robotics", summary: "Two robot iterations built for the CENTERSTAGE season.", image: "images/projects/ftc-2023-2024/robot-scoring-pixels.jpg" },
   { id: "vrc-competition-robots", title: "VRC Competition Robots", category: "Competition Robotics", summary: "Competition robots built and programmed across four VRC seasons.", image: "images/projects/vrc-competition-robots/2022-2023/competition-robot.jpg" },
   { id: "vex-differential-mecanum", title: "Differential Mecanum Drive", category: "Competition Robotics", summary: "Custom planetary transmission for balanced mecanum-wheel power.", image: "images/projects/vex-differential-mecanum/render.jpg" },
 
